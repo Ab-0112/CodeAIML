@@ -1,0 +1,667 @@
+{
+    "tasks": [
+        {
+            "task_title": "Task 1",
+            "scenario_context": "Context for Task 1",
+            "objective": "Assess skills",
+            "task_description": "**Task 1:**\n\n**Task_Title:** Implement a REST API endpoint for handling user authentication.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 2",
+            "scenario_context": "Context for Task 2",
+            "objective": "Assess skills",
+            "task_description": "**Scenario_Context:**\n- User needs to register, login, and store personal information.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 3",
+            "scenario_context": "Context for Task 3",
+            "objective": "Assess skills",
+            "task_description": "- Include scenario steps for user validation, error handling, and successful authentication.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 4",
+            "scenario_context": "Context for Task 4",
+            "objective": "Assess skills",
+            "task_description": "**Objective:**\n- Assess candidate's ability to implement secure and functional authentication mechanisms.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 5",
+            "scenario_context": "Context for Task 5",
+            "objective": "Assess skills",
+            "task_description": "**Task_Description:**\n- Write Python code that implements a REST API endpoint for user authentication using Django's built-in authentication framework.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 6",
+            "scenario_context": "Context for Task 6",
+            "objective": "Assess skills",
+            "task_description": "- Include necessary security considerations, such as proper authentication methods, data validation, and error handling.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 7",
+            "scenario_context": "Context for Task 7",
+            "objective": "Assess skills",
+            "task_description": "**Resources:**\n- Python\n- Django REST framework\n- SQLAlchemy\n\n**Estimated Time:** 30 minutes\n\n**Evaluation Criteria:**\n- Accuracy in user validation and authentication\n- Efficiency and readability of the code\n- Proper handling of errors and exceptions\n\n**Additional Considerations:**\n- Demonstrate candidate's understanding of authentication principles and best practices.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 8",
+            "scenario_context": "Context for Task 8",
+            "objective": "Assess skills",
+            "task_description": "- Encourage the candidate to explain their thought process and the steps they would take.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 9",
+            "scenario_context": "Context for Task 9",
+            "objective": "Assess skills",
+            "task_description": "**Task 2:**\n\n**Task_Title:** Design and implement a database schema for a social networking platform.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 10",
+            "scenario_context": "Context for Task 10",
+            "objective": "Assess skills",
+            "task_description": "**Scenario_Context:**\n- Define the tables and relationships between users, posts, comments, and likes.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 11",
+            "scenario_context": "Context for Task 11",
+            "objective": "Assess skills",
+            "task_description": "- Include scenarios for data integrity, foreign key constraints, and indexing.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 12",
+            "scenario_context": "Context for Task 12",
+            "objective": "Assess skills",
+            "task_description": "**Objective:**\n- Assess candidate's understanding of database design principles and ability to create a robust data model.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 13",
+            "scenario_context": "Context for Task 13",
+            "objective": "Assess skills",
+            "task_description": "**Task_Description:**\n- Design the database schema for a social networking platform using relational database management.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 14",
+            "scenario_context": "Context for Task 14",
+            "objective": "Assess skills",
+            "task_description": "- Include appropriate data types, relationships, and constraints.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 15",
+            "scenario_context": "Context for Task 15",
+            "objective": "Assess skills",
+            "task_description": "- Provide detailed documentation for the database schema, including table names, relationships, and data types.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 16",
+            "scenario_context": "Context for Task 16",
+            "objective": "Assess skills",
+            "task_description": "**Resources:**\n- Relational database management system\n- SQL\n\n**Estimated Time:** 45 minutes\n\n**Evaluation Criteria:**\n- Accuracy and completeness of the database schema\n- Clear and detailed documentation\n- Ability to identify and handle data integrity issues\n\n**Additional Considerations:**\n- Encourage the candidate to demonstrate their knowledge of relational database concepts and best practices.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 17",
+            "scenario_context": "Context for Task 17",
+            "objective": "Assess skills",
+            "task_description": "**Task 3:**\n\n**Task_Title:** Write a unit test for a key component of the Django application.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 18",
+            "scenario_context": "Context for Task 18",
+            "objective": "Assess skills",
+            "task_description": "**Scenario_Context:**\n- Provide a unit test case for a specific API endpoint that handles user registration.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 19",
+            "scenario_context": "Context for Task 19",
+            "objective": "Assess skills",
+            "task_description": "- Include test cases for various scenarios, such as valid and invalid user data.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 20",
+            "scenario_context": "Context for Task 20",
+            "objective": "Assess skills",
+            "task_description": "**Objective:**\n- Assess candidate's ability to write clear and concise unit tests for a real-world application.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 21",
+            "scenario_context": "Context for Task 21",
+            "objective": "Assess skills",
+            "task_description": "**Task_Description:**\n- Write a unit test for a specific component of the Django application using an appropriate testing framework.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 22",
+            "scenario_context": "Context for Task 22",
+            "objective": "Assess skills",
+            "task_description": "- Write clear and concise test cases that cover all relevant scenarios.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 23",
+            "scenario_context": "Context for Task 23",
+            "objective": "Assess skills",
+            "task_description": "- Use appropriate assertions and expected outcomes.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 24",
+            "scenario_context": "Context for Task 24",
+            "objective": "Assess skills",
+            "task_description": "**Resources:**\n- Python testing frameworks (e.g., pytest)\n- Django test framework\n\n**Estimated Time:** 45 minutes\n\n**Evaluation Criteria:**\n- Accuracy and completeness of the unit tests\n- Clear and concise test cases\n- Ability to identify and handle edge cases\n\n**Additional Considerations:**\n- Encourage the candidate to demonstrate their understanding of unit testing principles and best practices.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 25",
+            "scenario_context": "Context for Task 25",
+            "objective": "Assess skills",
+            "task_description": "**Task 4:**\n\n**Task_Title:** Implement a logging system for the Django application.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 26",
+            "scenario_context": "Context for Task 26",
+            "objective": "Assess skills",
+            "task_description": "**Scenario_Context:**\n- Define different logging levels and specify where logs should be written (e.g., console, file).",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 27",
+            "scenario_context": "Context for Task 27",
+            "objective": "Assess skills",
+            "task_description": "- Include scenarios for logging various types of events, such as user activity, error messages, and security events.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 28",
+            "scenario_context": "Context for Task 28",
+            "objective": "Assess skills",
+            "task_description": "**Objective:**\n- Assess candidate's ability to implement a comprehensive logging system.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 29",
+            "scenario_context": "Context for Task 29",
+            "objective": "Assess skills",
+            "task_description": "**Task_Description:**\n- Implement a logging system for the Django application using a suitable logging framework.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 30",
+            "scenario_context": "Context for Task 30",
+            "objective": "Assess skills",
+            "task_description": "- Write scenarios for logging different types of events, including user activities and security breaches.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 31",
+            "scenario_context": "Context for Task 31",
+            "objective": "Assess skills",
+            "task_description": "- Ensure proper configuration and functionality of the logging system.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 32",
+            "scenario_context": "Context for Task 32",
+            "objective": "Assess skills",
+            "task_description": "**Resources:**\n- Python logging libraries (e.g., logging, Django logging)\n\n**Estimated Time:** 45 minutes\n\n**Evaluation Criteria:**\n- Accuracy and completeness of logging configuration\n- Ability to log different types of events\n- Clear and concise logging messages\n\n**Additional Considerations:**\n- Encourage the candidate to demonstrate their understanding of logging principles and best practices.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 33",
+            "scenario_context": "Context for Task 33",
+            "objective": "Assess skills",
+            "task_description": "**Task 5:**\n\n**Task_Title:** Solve a coding problem related to Django data models.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 34",
+            "scenario_context": "Context for Task 34",
+            "objective": "Assess skills",
+            "task_description": "**Scenario_Context:**\n- Provide a real-world data modeling problem related to a specific application scenario.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 35",
+            "scenario_context": "Context for Task 35",
+            "objective": "Assess skills",
+            "task_description": "- Encourage the candidate to design a scalable and efficient data model.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 36",
+            "scenario_context": "Context for Task 36",
+            "objective": "Assess skills",
+            "task_description": "**Objective:**\n- Assess candidate's ability to apply data modeling concepts in a practical setting.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 37",
+            "scenario_context": "Context for Task 37",
+            "objective": "Assess skills",
+            "task_description": "**Task_Description:**\n- Present a coding problem related to data models and database design.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 38",
+            "scenario_context": "Context for Task 38",
+            "objective": "Assess skills",
+            "task_description": "- Encourage the candidate to propose an efficient and scalable data model for the given scenario.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        },
+        {
+            "task_title": "Task 39",
+            "scenario_context": "Context for Task 39",
+            "objective": "Assess skills",
+            "task_description": "**Resources:**\n- Django data models and relationships\n- Data modeling concepts\n\n**Estimated Time:** 60 minutes\n\n**Evaluation Criteria:**\n- Accuracy and completeness of the data model proposal\n- Understanding of data modeling principles and best practices\n- Ability to identify and address potential performance and scalability issues\n\n**Additional Considerations:**\n- Encourage the candidate to demonstrate their problem-solving skills and critical thinking abilities.",
+            "resources": [
+                "Python",
+                "Jira",
+                "GitHub"
+            ],
+            "estimated_time": 30,
+            "evaluation_criteria": "Accuracy, Efficiency",
+            "additional_considerations": "Optional follow-up",
+            "follow_up_tasks": [
+                "How would you improve your solution?"
+            ]
+        }
+    ]
+}
