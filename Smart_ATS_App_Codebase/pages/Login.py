@@ -1,8 +1,6 @@
 import streamlit as st
 from utils.firebase import auth, save_user_session
 
-st.set_page_config(page_title="Login | Smart ATS")
-
 st.title("🔐 Login to Smart ATS")
 
 email = st.text_input("Email")

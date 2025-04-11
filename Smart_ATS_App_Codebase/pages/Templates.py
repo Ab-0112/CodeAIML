@@ -52,7 +52,13 @@ def run():
         with open("resume.html", "w", encoding="utf-8") as f:
             f.write(resume_html)
 
-        pdfkit.from_file("resume.html", "resume.pdf")
+        import pdfkit
+
+        path_to_wkhtmltopdf = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'  # Make sure this path is correct
+        config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
+
+        pdfkit.from_file("resume.html", "resume.pdf", configuration=config)
+
 
         with open("resume.pdf", "rb") as f:
             st.download_button("⬇️ Download Resume as PDF", f, file_name="Your_Resume.pdf")
