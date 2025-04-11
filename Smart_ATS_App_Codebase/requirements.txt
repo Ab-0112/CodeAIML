@@ -1,0 +1,6 @@
+streamlit
+pyrebase4
+python-dotenv
+PyPDF2
+google-generativeai
+pandas
