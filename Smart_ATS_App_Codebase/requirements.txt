@@ -5,3 +5,5 @@ PyPDF2
 google-generativeai
 pandas
 fpdf
+pdfkit
+plotly

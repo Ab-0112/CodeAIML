@@ -16,8 +16,7 @@ def main():
     elif page == "Insights Dashboard":
         Insights.run()
     elif page == "Login":
-        Login.login_btn
-        Login.signup_btn
+        Login.login_page
     elif page == "History":
         History.run()
     else:

@@ -4,6 +4,7 @@ from utils.gemini_api import get_gemini_response
 from fpdf import FPDF
 import tempfile
 import os
+import unicodedata  # Added for Unicode sanitization
 
 # Prompt strictly tells Gemini to return resume ONLY, no explanation
 def generate_enhancer_prompt(resume_text):
@@ -16,7 +17,14 @@ Resume:
 {resume_text}
 """
 
+# Function to sanitize any Unicode characters not supported by FPDF (latin-1)
+def sanitize_text(text):
+    # Normalize to NFKD form, strip out non-latin1 characters
+    return unicodedata.normalize("NFKD", text).encode("latin-1", "ignore").decode("latin-1")
+
 def create_pdf(content):
+    content = sanitize_text(content)  # ✅ Sanitize before adding to PDF
+
     pdf = FPDF()
     pdf.add_page()
     pdf.set_auto_page_break(auto=True, margin=15)
