@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>🎓 Capstone Project Generator</h1>
+  <p>Enter your full learning path below to generate a custom capstone project idea:</p>
+  <textarea id="learningPath" rows="10" placeholder="e.g. Python → Web Dev → APIs → Databases → Deployment..."></textarea>
+  <br>
+  <button onclick="generateCapstone()">🚀 Generate</button>
+
+  <div id="output">Output will appear here...</div>
+  <div id="status"></div>
+
+  <script>
+    async function generateCapstone() {
+      const outputDiv = document.getElementById("output");
+      const statusDiv = document.getElementById("status");
+      const learningPath = document.getElementById("learningPath").value.trim();
+
+      if (!learningPath) {
+        outputDiv.innerText = "⚠️ Please enter a learning path.";
+        return;
+      }
+
+      outputDiv.innerText = "⏳ Generating capstone project...\n";
+      statusDiv.innerText = "🔌 Connecting to backend...";
+
+      try {
+        const response = await fetch("http://127.0.0.1:8080/generate_project", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ learning_path: learningPath })
+        });
+
+        if (!response.ok) {
+          const err = await response.text();
+          outputDiv.innerText = `❌ Server Error: ${err}`;
+          statusDiv.innerText = "❌ Connection failed.";
+          return;
+        }
+
+        statusDiv.innerText = "✅ Connected successfully!";
+        const projectData = await response.json();
+
+        // Format the JSON response into readable text
+        let outputText = `📝 ${projectData.title}\n\n`;
+        outputText += `📖 Description: ${projectData.description}\n\n`;
+        outputText += `🛠 Technologies: ${projectData.technologies.join(', ')}\n\n`;
+        outputText += `🎯 Expected Outcomes:\n- ${projectData.expected_outcomes.join('\n- ')}\n\n`;
+        outputText += `📦 Deliverables:\n- ${projectData.deliverables.join('\n- ')}\n\n`;
+        
+        projectData.phases.forEach((phase, index) => {
+          outputText += `\n🔰 Phase ${index + 1}: ${phase.name} (${phase.duration})\n`;
+          phase.modules.forEach(module => {
+            outputText += `   ├─ ${module.name}\n`;
+            outputText += `   │  → Type: ${module.content_type}\n`;
+            outputText += `   │  → Duration: ${module.content_duration}\n`;
+            outputText += `   │  → ${module.description}\n`;
+          });
+        });
+
+        outputDiv.innerText = outputText;
+
+      } catch (err) {
+        outputDiv.innerText = "❌ Failed to connect to backend: " + err;
+        statusDiv.innerText = "❌ Connection failed.";
+      }
+    }
+  </script>
+</body>
+</html>

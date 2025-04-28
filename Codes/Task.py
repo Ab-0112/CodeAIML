@@ -89,20 +89,20 @@ Company Description: {company_description}
 
 🔹 STRICT JSON OUTPUT FORMAT:
 Return a valid JSON object containing exactly six interview tasks, following this structure:
-    {{
+    {{ 
         "tasks": [
-            {{
-                "task_title": "Task 1 Title",
-                "scenario_context": "Brief, realistic scenario setting the stage for Task 1.",
-                "objective": "Clearly state what this task assesses (e.g., problem-solving, technical proficiency).",
-                "task_description": "Detailed instructions on what the candidate must do.",
-                "resources": ["List of relevant tools, platforms, or datasets needed."],
-                "estimated_time": 30,
-                "evaluation_criteria": "Define key success factors (e.g., accuracy, efficiency, innovation).",
-                "additional_considerations": "Any optional aspects (e.g., time constraints, bonus challenges).",
-                "follow_up_tasks": ["Optional follow-up questions to explore deeper insights."]
+            {{ 
+                "task_title": "Task 1 Title", 
+                "scenario_context": "Brief, realistic scenario setting the stage for Task 1.", 
+                "objective": "Clearly state what this task assesses (e.g., problem-solving, technical proficiency).", 
+                "task_description": "Detailed instructions on what the candidate must do.", 
+                "resources": ["List of relevant tools, platforms, or datasets needed."], 
+                "estimated_time": 30, 
+                "evaluation_criteria": "Define key success factors (e.g., accuracy, efficiency, innovation).", 
+                "additional_considerations": "Any optional aspects (e.g., time constraints, bonus challenges).", 
+                "follow_up_tasks": ["Optional follow-up questions to explore deeper insights."] 
             }}
-        ]
+        ] 
     }}
 
     🔹 FINAL INSTRUCTIONS:
@@ -174,21 +174,18 @@ def handle_generate_task(json_data):
         extracted_json = extract_json(response_data)
 
         if extracted_json:
-            logging.info(f"✅ Extracted JSON: {extracted_json}")
+            try:
+                task_output = TaskOutput(**extracted_json)
+                emit('task_output', task_output.model_dump(), broadcast=True)
+                elapsed_time = time.time() - start_time
+                logging.info(f"✅ Task generation completed in {elapsed_time:.2f} seconds.")
+                emit('task_completion', {'elapsed_time': elapsed_time}, broadcast=True)
+            except ValidationError as e:
+                logging.error(f"❌ Validation Error: {str(e)}")
+                emit('message', {'data': f"Validation Error: {e.errors()}"}, broadcast=True)
         else:
-            logging.error("❌ No valid JSON found!")
-
-        try:
-            task_output = TaskOutput(**extracted_json)
-
-            emit('task_output', {'tasks': task_output.model_dump()}, broadcast=True)
-            elapsed_time = time.time() - start_time
-            logging.info(f"✅ Task generation completed in {elapsed_time:.2f} seconds.")
-            emit('task_completion', {'elapsed_time': elapsed_time}, broadcast=True)
-
-        except ValidationError as e:
-            logging.error(f"❌ Validation Error: {str(e)}")
-            emit('message', {'data': f"Validation Error: {e.errors()}"}, broadcast=True)
+            logging.error("❌ Error: No valid JSON found in the response.")
+            emit('message', {'data': "❌ Error: No valid JSON found in the response."}, broadcast=True)
 
     except Exception as e:
         logging.error(f"🚨 Error during task generation: {e}")
@@ -204,4 +201,3 @@ if __name__ == '__main__':
         logging.error("🚨 Failed to initialize task chain!")
 
     socketio.run(app, host='0.0.0.0', port=5000, debug=True)
-  

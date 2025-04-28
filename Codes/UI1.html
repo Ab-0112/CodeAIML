@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛠️ Scenario-Based Task Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #f9fafb;
+      padding: 1rem;
+    }
+    h1 {
+      color: #333;
+    }
+    textarea, input, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .task-card {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    #loader {
+      display: none;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #status {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛠️ Scenario-Based Task Generator</h1>
+
+  <input type="text" id="jobTitle" placeholder="Job Title" />
+  <textarea id="competencies" placeholder="Key Competencies (comma-separated)"></textarea>
+  <input type="number" id="duration" placeholder="Duration (minutes)" value="60" />
+  <select id="complexity">
+    <option value="Low">Low</option>
+    <option value="Medium" selected>Medium</option>
+    <option value="High">High</option>
+  </select>
+  <textarea id="description" placeholder="Job Description..."></textarea>
+  <input type="text" id="companyName" placeholder="Company Name" />
+  <textarea id="companyDescription" placeholder="Company Description..."></textarea>
+  <button onclick="generateTasks()">🚀 Generate Tasks</button>
+
+  <div id="status">🟡 Status: Waiting for input...</div>
+  <div id="loader"><div class="spinner"></div></div>
+  <div id="results"></div>
+
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script>
+    const socket = io("http://localhost:5000");
+
+    const statusEl = document.getElementById("status");
+    const loaderEl = document.getElementById("loader");
+    const resultEl = document.getElementById("results");
+
+    socket.on("task_output", (data) => {
+      loaderEl.style.display = "none";
+      statusEl.innerText = "✅ Status: Done!";
+      console.log(data); // Debug: See the structure
+
+      const tasks = data.tasks || [];
+      resultEl.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        resultEl.innerHTML += `
+          <div class="task-card">
+            <h3>📌 Task ${index + 1}: ${task.task_title}</h3>
+            <p><strong>Scenario:</strong> ${task.scenario_context}</p>
+            <p><strong>Objective:</strong> ${task.objective}</p>
+            <p><strong>Description:</strong> ${task.task_description}</p>
+            <p><strong>Resources:</strong> ${task.resources.join(", ")}</p>
+            <p><strong>Estimated Time:</strong> ${task.estimated_time} min</p>
+            <p><strong>Evaluation Criteria:</strong> ${task.evaluation_criteria}</p>
+            ${task.additional_considerations ? `<p><strong>Additional:</strong> ${task.additional_considerations}</p>` : ""}
+            ${task.follow_up_tasks?.length ? `<p><strong>Follow-ups:</strong> ${task.follow_up_tasks.join(", ")}</p>` : ""}
+          </div>`;
+      });
+    });
+
+    socket.on("message", (msg) => {
+      loaderEl.style.display = "none";
+      statusEl.innerText = "❌ Status: " + msg.data;
+      resultEl.innerHTML = `<p><strong>${msg.data}</strong></p>`;
+    });
+
+    function generateTasks() {
+      const jobTitle = document.getElementById("jobTitle").value;
+      const competencies = document.getElementById("competencies").value.split(",").map(s => s.trim()).filter(Boolean);
+      const duration = parseInt(document.getElementById("duration").value) || 60;
+      const complexity = document.getElementById("complexity").value;
+      const description = document.getElementById("description").value;
+      const companyName = document.getElementById("companyName").value;
+      const companyDescription = document.getElementById("companyDescription").value;
+
+      loaderEl.style.display = "block";
+      statusEl.innerText = "⏳ Status: Generating tasks...";
+      resultEl.innerHTML = "";
+
+      socket.emit("generate_task", JSON.stringify({
+        jobTitle,
+        competencies,
+        duration,
+        complexity,
+        description,
+        company: {
+          name: companyName,
+          description: companyDescription
+        }
+      }));
+    }
+  </script>
+</body>
+</html>
