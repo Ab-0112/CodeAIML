@@ -1,0 +1,20 @@
+# dataframe 2
+datframe = function(a,b,c,d){
+  df = data.frame(a,b,c,d)
+  head(df)
+  print(is.data.frame(df))
+  print(sum(is.na(df)))
+  print(sum(duplicated(df)))
+  print(rowSums(df))
+  print(colSums(df))
+  print(apply(df,1,mean))
+  print(apply(df,2,median))
+  print(apply(df,1,sd))
+  print(apply(df,2,var))
+  print(tail(df))
+}
+a = rbinom(20,size = 10, prob = 0.5)
+b = rnorm(20)
+c = sample(1:100,20)
+d = runif(20)
+datframe(a,b,c,d)
