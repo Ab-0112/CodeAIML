@@ -1,5 +1,0 @@
-gradio
-torch
-torchvision
-opencv-python
-pillow
